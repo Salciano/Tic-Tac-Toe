@@ -1,7 +1,7 @@
 import random
 
 def create_board():
-# Creates an empty Tic-Tac-Toe board.
+# Create Tic-Tac-Toe board.
     return {
         'up-left': ' ', 'up': ' ', 'up-right': ' ',
         'left': ' ', 'center': ' ', 'right': ' ',
@@ -9,7 +9,7 @@ def create_board():
     }
 
 def display_board(board):
-    """Displays the Tic-Tac-Toe board."""
+# Displays the Tic-Tac-Toe board.
     print(f"""
  {board['up-left']} | {board['up']} | {board['up-right']}
 ---+---+---
@@ -51,7 +51,7 @@ def check_draw(board):
 def get_human_move(board):
     """Gets the human player's move."""
     while True:
-        move = input("Enter your move (left, right, up, down, center, up-left, up-right, down-left, down-right): ")
+        move = input("Enter your move (left, right, up, down, center, up-left, up-right, down-left, down-right): \n")
         if is_valid_move(board, move):
             return move
         else:
